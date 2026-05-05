@@ -5,7 +5,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Claude Skill](https://img.shields.io/badge/Claude-Skill-blue)](https://claude.ai)
 [![Education](https://img.shields.io/badge/Category-Education-green)]()
-[![Prompt Engineering](https://img.shields.io/badge/Type-Prompt%20Engineering-purple)]()
 
 ---
 
