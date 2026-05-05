@@ -1,66 +1,202 @@
-# Professor Skill for Claude Code
+# 🎓 claude-professor-skill
 
-An advanced AI teaching assistant skill that behaves like a strict but helpful university professor.
+> **Transform Claude into a strict, intelligent university professor** — with structured lecture modes, interactive MCQ widgets, exam simulation, weakness tracking, and exam probability ratings.
 
-## Features
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Claude Skill](https://img.shields.io/badge/Claude-Skill-blue)](https://claude.ai)
+[![Education](https://img.shields.io/badge/Category-Education-green)]()
+[![Prompt Engineering](https://img.shields.io/badge/Type-Prompt%20Engineering-purple)]()
 
-- **4 Modes**: Lecture, Exam, Prediction, Practice
-- **Star Rating System**: Labels concepts by exam importance (⭐ to ⭐⭐⭐)
-- **Interactive MCQs**: Button-based questions with navigation
-- **Memory Tracking**: Tracks strong/weak/critical areas per session
-- **Strict Interaction Rules**: Never skips steps, never reveals answers early
+---
 
-## Installation
+## 🧠 What is this?
 
-### Option 1 — Project-level (applies to one project)
+`claude-professor-skill` is a **plug-and-play Claude skill** that activates a full university professor persona inside Claude. It is built for students, self-learners, and educators who want AI-powered studying that goes far beyond simple Q&A.
 
-1. In your project root, create the folder `.claude/skills/` if it doesn't exist.
-2. Copy `professor.md` into `.claude/skills/professor.md`.
+Once activated with the keyword **`lecture me`**, Claude becomes a domain-expert professor capable of:
 
-### Option 2 — Global (applies to all your projects)
+- 📚 Teaching structured lectures with real academic depth
+- 📝 Generating and grading full exams (midterm & final)
+- 🔮 Predicting high-probability exam topics
+- 💪 Running adaptive practice sessions targeting your weak areas
 
-1. Open your global Claude Code config folder:
-   - **Windows**: `C:\Users\<you>\.claude\skills\`
-   - **macOS / Linux**: `~/.claude/skills/`
-2. Copy `professor.md` into that folder.
+This is not a generic chatbot prompt. It is a **structured, stateful, interaction-driven skill** with a strict MCQ widget system, memory tracking, and a star-based exam importance rating system.
 
-> If the `skills/` folder does not exist, create it manually.
+---
 
-## Usage
+## ✨ Features
 
-1. Upload or paste your course materials (lecture notes, PDFs, GitHub repo link, etc.) into the conversation.
-2. Type:
+### 🎯 4 Core Modes
+
+| Mode | Description |
+|------|-------------|
+| **1. Lecture Mode** | Professor-style teaching with concept → intuition → example → common mistakes. Ends with MCQ generation. |
+| **2. Exam Mode** | Full midterm or final simulation. No answers revealed until full submission. Strict grading. |
+| **3. Prediction Mode** | AI identifies high/medium/low probability exam topics using the ⭐ system. |
+| **4. Practice Mode** | Adaptive exercises starting easy → hard. Focuses on your weak areas automatically. |
+
+---
+
+### ⭐ Exam Importance Rating System
+
+Every concept is labeled with exam probability so you study smarter:
+
+| Rating | Meaning |
+|--------|---------|
+| ⭐ | Low probability — good to know |
+| ⭐⭐ | Medium probability — study this |
+| ⭐⭐⭐ | **HIGH probability — very likely on exams** |
+
+Concepts rated ⭐⭐⭐ are explicitly flagged: *"This concept is very likely to appear in exams."*
+
+---
+
+### 📊 Interactive MCQ Widget System
+
+All multiple-choice questions follow a strict interactive format:
+
+- **Selectable A/B/C/D buttons** — click to answer
+- **Immediate color-coded feedback** — ✅ green for correct, ❌ red for incorrect
+- **Professor-level explanations** after every answer
+- **Previous / Next navigation buttons**
+- **Next Question locked** until you answer (no skipping)
+- **Full score tracking** and final grade
+
+---
+
+### 🧠 Memory & Weakness Tracking System
+
+The professor tracks your performance internally across the session:
+
+| Status | Condition |
+|--------|-----------|
+| ✅ Strong Topic | Consistently correct answers |
+| ⚠️ Weak Topic | Wrong answer recorded |
+| 🚨 Critical Weak Area | Repeated mistakes on same concept |
+
+Weak areas are **automatically revisited** and flagged: *"This is one of your weak areas — we need to reinforce it."*
+
+---
+
+## 🚀 How to Use
+
+### Step 1 — Install the Skill
+
+Download `SKILL.md` from this repository and upload it to your Claude session (or add it to your Claude Project's knowledge base).
+
+### Step 2 — Activate
+
+Type exactly:
 
 ```
 lecture me
 ```
 
-3. Select a mode when prompted:
+### Step 3 — Select a Mode
+
+Claude will display:
 
 ```
-1. Lecture Mode
-2. Exam Mode
-3. Prediction Mode
-4. Practice Mode
+SELECT MODE:
+1. Lecture Mode (teach + interactive questions)
+2. Exam Mode (generate full exam)
+3. Prediction Mode (midterm/final predictions)
+4. Practice Mode (exercises only)
 ```
 
-4. Follow the professor's instructions.
+Select a mode (1–4) and optionally specify a topic.
 
-## Modes
+### Step 4 — Study
 
-| Mode | What it does |
-|---|---|
-| **Lecture** | Teaches topic with structure, examples, and MCQs |
-| **Exam** | Generates a full midterm or final exam |
-| **Prediction** | Predicts what topics are likely to appear in exams |
-| **Practice** | Generates exercises with increasing difficulty |
+Claude will teach, quiz, test, or predict — depending on your mode — using your uploaded course materials or specified subject.
 
-## Notes
+---
 
-- The skill works ONLY with materials you provide — it does not hallucinate outside given content.
-- If materials are missing or unclear, it will ask before proceeding.
-- MCQ navigation is fully interactive: you must answer before moving forward.
+## 📁 Repository Structure
 
-## License
+```
+claude-professor-skill/
+│
+├── SKILL.md          ← The main skill file (upload this to Claude)
+├── README.md         ← This file
+└── LICENSE           ← MIT License
+```
 
-MIT — free to use, modify, and share.
+---
+
+## 🎓 Who Is This For?
+
+- 🧑‍🎓 **University students** preparing for midterms and finals
+- 📖 **Self-learners** studying technical or academic subjects
+- 🏫 **Educators** who want to prototype AI-powered tutoring experiences
+- 🤖 **Prompt engineers** exploring Claude skill architecture
+- 💻 **Developers** building Claude-powered educational tools
+
+Works especially well for: **Computer Science, Engineering, Medicine, Law, Business, Mathematics, Physics, History, and any structured academic subject.**
+
+---
+
+## 🔧 Technical Details
+
+- **Activation keyword:** `lecture me`
+- **Compatible with:** Claude claude-sonnet-4-20250514, Claude Opus, Claude.ai, Claude Projects
+- **Skill type:** Instruction-based prompt skill (no API key required)
+- **Interaction model:** Stateful, turn-based, user-gated navigation
+- **MCQ rendering:** Button-based with inline color feedback (green/red)
+- **Memory scope:** Session-scoped weakness tracking
+
+---
+
+## 💡 Example Use Cases
+
+```
+lecture me
+→ Select: 1 (Lecture Mode)
+→ Topic: Architectural Design Patterns in Software Engineering
+```
+
+```
+lecture me
+→ Select: 2 (Exam Mode)
+→ Final exam on Operating Systems
+```
+
+```
+lecture me
+→ Select: 3 (Prediction Mode)
+→ Topic: Database Management Systems — what will be on the midterm?
+```
+
+```
+lecture me
+→ Select: 4 (Practice Mode)
+→ Topic: Deep Learning — backpropagation and optimization
+```
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome. If you have ideas for new modes, better MCQ rendering, or subject-specific improvements — open an issue first to discuss.
+
+---
+
+## 📄 License
+
+MIT License — free to use, modify, and distribute. See [LICENSE](./LICENSE) for details.
+
+---
+
+## 🏷️ Keywords & Topics
+
+`claude` `anthropic` `claude-skill` `ai-tutor` `llm` `education` `exam-prep` `study-assistant` `prompt-engineering` `mcq` `university` `tutoring` `interactive-learning` `ai-education` `claude-ai` `llm-prompt` `academic` `exam-simulation` `weakness-tracking` `adaptive-learning`
+
+---
+
+<div align="center">
+
+**If this helped you study smarter, drop a ⭐ — it helps others find it too.**
+
+Made for students, by a student.
+
+</div>
