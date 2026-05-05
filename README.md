@@ -61,6 +61,13 @@ All multiple-choice questions follow a strict interactive format:
 - **Next Question locked** until you answer (no skipping)
 - **Full score tracking** and final grade
 
+  Here's what it looks like in action:
+
+  <img width="798" height="636" alt="image" src="https://github.com/user-attachments/assets/f0f7341e-17a8-4a21-b0b3-6e253b36f1aa" />
+
+  The widget highlights your selection in red if wrong and the correct answer in green, followed by a detailed professor-level explanation — instantly, before you move on.
+
+
 ---
 
 ### 🧠 Memory & Weakness Tracking System
