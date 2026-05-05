@@ -78,11 +78,21 @@ Weak areas are **automatically revisited** and flagged: *"This is one of your we
 
 ---
 
-## 🚀 How to Use
+## Step 1 — Installation
 
-### Step 1 — Install the Skill
+### Option 1 — Project-level (applies to one project)
 
-Download `SKILL.md` from this repository and upload it to your Claude session (or add it to your Claude Project's knowledge base).
+1. In your project root, create the folder `.claude/skills/` if it doesn't exist.
+2. Copy `professor.md` into `.claude/skills/professor.md`.
+
+### Option 2 — Global (applies to all your projects)
+
+1. Open your global Claude Code config folder:
+   - **Windows**: `C:\Users\<you>\.claude\skills\`
+   - **macOS / Linux**: `~/.claude/skills/`
+2. Copy `professor.md` into that folder.
+
+> If the `skills/` folder does not exist, create it manually.
 
 ### Step 2 — Activate
 
@@ -112,30 +122,6 @@ Claude will teach, quiz, test, or predict — depending on your mode — using y
 
 ---
 
-## 📁 Repository Structure
-
-```
-claude-professor-skill/
-│
-├── SKILL.md          ← The main skill file (upload this to Claude)
-├── README.md         ← This file
-└── LICENSE           ← MIT License
-```
-
----
-
-## 🎓 Who Is This For?
-
-- 🧑‍🎓 **University students** preparing for midterms and finals
-- 📖 **Self-learners** studying technical or academic subjects
-- 🏫 **Educators** who want to prototype AI-powered tutoring experiences
-- 🤖 **Prompt engineers** exploring Claude skill architecture
-- 💻 **Developers** building Claude-powered educational tools
-
-Works especially well for: **Computer Science, Engineering, Medicine, Law, Business, Mathematics, Physics, History, and any structured academic subject.**
-
----
-
 ## 🔧 Technical Details
 
 - **Activation keyword:** `lecture me`
@@ -144,34 +130,6 @@ Works especially well for: **Computer Science, Engineering, Medicine, Law, Busin
 - **Interaction model:** Stateful, turn-based, user-gated navigation
 - **MCQ rendering:** Button-based with inline color feedback (green/red)
 - **Memory scope:** Session-scoped weakness tracking
-
----
-
-## 💡 Example Use Cases
-
-```
-lecture me
-→ Select: 1 (Lecture Mode)
-→ Topic: Architectural Design Patterns in Software Engineering
-```
-
-```
-lecture me
-→ Select: 2 (Exam Mode)
-→ Final exam on Operating Systems
-```
-
-```
-lecture me
-→ Select: 3 (Prediction Mode)
-→ Topic: Database Management Systems — what will be on the midterm?
-```
-
-```
-lecture me
-→ Select: 4 (Practice Mode)
-→ Topic: Deep Learning — backpropagation and optimization
-```
 
 ---
 
@@ -185,18 +143,3 @@ Pull requests are welcome. If you have ideas for new modes, better MCQ rendering
 
 MIT License — free to use, modify, and distribute. See [LICENSE](./LICENSE) for details.
 
----
-
-## 🏷️ Keywords & Topics
-
-`claude` `anthropic` `claude-skill` `ai-tutor` `llm` `education` `exam-prep` `study-assistant` `prompt-engineering` `mcq` `university` `tutoring` `interactive-learning` `ai-education` `claude-ai` `llm-prompt` `academic` `exam-simulation` `weakness-tracking` `adaptive-learning`
-
----
-
-<div align="center">
-
-**If this helped you study smarter, drop a ⭐ — it helps others find it too.**
-
-Made for students, by a student.
-
-</div>
