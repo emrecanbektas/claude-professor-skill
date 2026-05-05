@@ -20,7 +20,7 @@ An advanced AI teaching assistant skill that behaves like a strict but helpful u
 ### Option 2 — Global (applies to all your projects)
 
 1. Open your global Claude Code config folder:
-   - **Windows**: `%APPDATA%\Claude\skills\` or `C:\Users\<you>\.claude\skills\`
+   - **Windows**: `C:\Users\<you>\.claude\skills\`
    - **macOS / Linux**: `~/.claude/skills/`
 2. Copy `professor.md` into that folder.
 
