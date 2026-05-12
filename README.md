@@ -149,7 +149,7 @@ Pull requests are welcome. If you have ideas for new modes, better MCQ rendering
 **Baran Salis** — [@Baransalis42](https://github.com/Baransalis42)
 **Emrecan Bektas** — [@emrecanbektas](https://github.com/emrecanbektas)
 
-**Project Link:** — https://github.com/emrecanbektas/graphical-calculator
+**Project Link:** — https://github.com/emrecanbektas/claude-professor-skill)
 
 ---
 ## 📄 License
